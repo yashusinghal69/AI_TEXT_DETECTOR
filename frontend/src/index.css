@@ -1,0 +1,372 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,700;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+body{
+    font-family: 'Work Sans', sans-serif;
+ 
+    background : linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    animation: 8s ani infinite;
+    overflow: hidden;
+        width: 100%;
+        height:100vh;
+}
+  
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+} 
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.textarea{
+    width: 130vb;
+  height: 40vh;
+  resize: none;
+  padding: 20px;
+  font-size: 22px;
+  border-radius: 1.5rem;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid #3498db;
+  margin: 2em 0 1em 0;
+}
+textarea:focus {
+    outline: none;
+    border-color: #2ecc71;
+    box-shadow: 0 0 50px #2ecc71;
+  }
+  
+svg {
+	font-family: "Work Sans", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 4s infinite alternate;
+	stroke-width: 2;
+	stroke: #FF1C00;
+	font-size: 7em;  
+    text-align: center;
+ 
+}
+@keyframes stroke {
+    0% {
+        fill: rgba(79, 26, 204, 0);
+        stroke: #FF004D;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+      }
+      50% {
+        fill: rgba(79, 26, 204, 0);
+        stroke: #40c057;
+      }
+      60% {
+        fill: rgba(79, 26, 204, 0);
+        stroke: #F8FF27;
+        stroke-width: 3;
+      }
+      70% {
+        fill: rgba(79, 26, 204, 0);
+        stroke: #00bcd4;
+      }
+      80% {
+        fill: rgba(79, 26, 204, 0);
+        stroke: #ff6b6b;
+        stroke-width: 4;
+      }
+      90% {
+        fill: rgba(79, 26, 204, 0);
+        stroke: #f9678a;
+      }
+      100% {
+        fill: black;
+        stroke: rgba(255, 28, 0, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+      }
+    }
+    
+ 
+.wrapper{
+    backdrop-filter: blur(12px) saturate(96%);
+    -webkit-backdrop-filter: blur(12px) saturate(96%);
+    background-color: rgba(255, 255, 255, 0.42);
+    border-radius: 2rem;
+    border: 1px solid rgba(209, 213, 219, 0.3)
+ 
+}
+ 
+.ui-btn {
+    --btn-default-bg: rgb(41, 41, 41);
+    --btn-padding: 15px 20px;
+    --btn-hover-bg: rgb(51, 51, 51);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #FAC921;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    /* 👆 this field should not be empty */
+    --font-weight: 900;
+    --font-family: Menlo,Roboto Mono,monospace;
+    /* 👆 this field should not be empty */
+  }
+  
+  /* button settings 👆 */
+  
+  .ui-btn {
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+    border-radius: 1.5rem;
+    height: 4rem;
+    width :8rem;
+   
+}
+  .ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+  }
+  
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+  
+  .ui-btn:hover, .ui-btn:focus {
+    background: var(--btn-hover-bg);
+  }
+  
+  .ui-btn:hover span, .ui-btn:focus span {
+    color: var(--hover-btn-color);
+  }
+  
+  .ui-btn:hover span::before, .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+  }
+  
+  @keyframes chitchat {
+    0% {
+      content: "#";
+    }
+  
+    5% {
+      content: ".";
+    }
+  
+    10% {
+      content: "^{";
+    }
+  
+    15% {
+      content: "-!";
+    }
+  
+    20% {
+      content: "#$_";
+    }
+  
+    25% {
+      content: "№:0";
+    }
+  
+    30% {
+      content: "#{+.";
+    }
+  
+    35% {
+      content: "@}-?";
+    }
+  
+    40% {
+      content: "?{4@%";
+    }
+  
+    45% {
+      content: "=.,^!";
+    }
+  
+    50% {
+      content: "?2@%";
+    }
+  
+    55% {
+      content: "\;1}]";
+    }
+  
+    60% {
+      content: "?{%:%";
+      right: 0;
+    }
+  
+    65% {
+      content: "|{f[4";
+      right: 0;
+    }
+  
+    70% {
+      content: "{4%0%";
+      right: 0;
+    }
+  
+    75% {
+      content: "'1_0<";
+      right: 0;
+    }
+  
+    80% {
+      content: "{0%";
+      right: 0;
+    }
+  
+    85% {
+      content: "]>'";
+      right: 0;
+    }
+  
+    90% {
+      content: "4";
+      right: 0;
+    }
+  
+    95% {
+      content: "2";
+      right: 0;
+    }
+  
+    100% {
+      content: "";
+      right: 0;
+    }
+  }
+  
+
+
+
+.result {
+    text-align: center;
+    margin-top: 2em;
+  }
+  .result p {
+    font-size: 2em;
+    margin: 5px 0;
+    color: black; 
+
+  }
+
+
+
+  /* GITHUB */
+  .button-icon {
+    display: flex;
+    border: 3px #fff solid;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    position: absolute;
+    bottom:0.1em;
+    right: 0;
+  }
+  a{
+    text-decoration: none;
+    color :white;
+  }
+  .icon {
+    background-color: #fff;
+    padding: 10px 10px 5px 10px;
+  }
+  
+  .icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .cube {
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 20px;
+  }
+  
+  .button-icon:hover {
+    border-color: #ff98a2;
+  }
+  
+  .button-icon:hover .cube {
+    transform: rotateX(90deg);
+  }
+  
+  .side {
+    position: absolute;
+    height: 47px;
+    width: 200px;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  
+  .top {
+    background: #ff98a2;
+    color: #fff;
+    transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+  }
+  
+  .front {
+    background: #222229;
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+  }
+
+
+
+
+  .text {
+    width:350px;
+    height: 130px;
+    margin: 20px 0 20px 20px;
+    resize: none;
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 1em;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 3px solid #3498db;
+   
+  }
+  .text:focus {
+    outline: none;
+    border-color: #FAC921;
+    box-shadow: 0 0 50px #FAC921;
+  }
